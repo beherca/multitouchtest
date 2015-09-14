@@ -1,0 +1,209 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@2.1.16
+3 info using node@v0.10.21
+4 warn package.json pushgame@ No description
+5 warn package.json pushgame@ No repository field.
+6 warn package.json pushgame@ No README data
+7 verbose install where, deps [ '/Users/beherca/workspace/pushgame',
+7 verbose install   [ 'apache-server-configs',
+7 verbose install     'grunt',
+7 verbose install     'grunt-autoprefixer',
+7 verbose install     'grunt-concurrent',
+7 verbose install     'grunt-contrib-clean',
+7 verbose install     'grunt-contrib-concat',
+7 verbose install     'grunt-contrib-connect',
+7 verbose install     'grunt-contrib-copy',
+7 verbose install     'grunt-contrib-cssmin',
+7 verbose install     'grunt-contrib-htmlmin',
+7 verbose install     'grunt-contrib-imagemin',
+7 verbose install     'grunt-contrib-jshint',
+7 verbose install     'grunt-contrib-uglify',
+7 verbose install     'grunt-contrib-watch',
+7 verbose install     'grunt-mocha',
+7 verbose install     'grunt-modernizr',
+7 verbose install     'grunt-newer',
+7 verbose install     'grunt-rev',
+7 verbose install     'grunt-sass',
+7 verbose install     'grunt-svgmin',
+7 verbose install     'grunt-usemin',
+7 verbose install     'grunt-wiredep',
+7 verbose install     'jshint-stylish',
+7 verbose install     'load-grunt-tasks',
+7 verbose install     'time-grunt' ] ]
+8 verbose install where, peers [ '/Users/beherca/workspace/pushgame', [] ]
+9 info preinstall pushgame@
+10 verbose already installed skipping grunt-contrib-copy@^0.5.0 /Users/beherca/workspace/pushgame
+11 verbose already installed skipping grunt-contrib-cssmin@^0.10.0 /Users/beherca/workspace/pushgame
+12 verbose already installed skipping grunt-contrib-htmlmin@^0.3.0 /Users/beherca/workspace/pushgame
+13 verbose already installed skipping grunt-contrib-imagemin@^0.8.0 /Users/beherca/workspace/pushgame
+14 verbose already installed skipping grunt-contrib-jshint@^0.10.0 /Users/beherca/workspace/pushgame
+15 verbose already installed skipping grunt-contrib-uglify@^0.5.1 /Users/beherca/workspace/pushgame
+16 verbose already installed skipping grunt-contrib-watch@^0.6.1 /Users/beherca/workspace/pushgame
+17 verbose already installed skipping grunt-mocha@^0.4.10 /Users/beherca/workspace/pushgame
+18 verbose already installed skipping grunt-modernizr@^0.5.2 /Users/beherca/workspace/pushgame
+19 verbose already installed skipping grunt-newer@^0.7.0 /Users/beherca/workspace/pushgame
+20 verbose already installed skipping grunt-rev@^0.1.0 /Users/beherca/workspace/pushgame
+21 silly cache add args [ 'grunt-sass@^0.14.0', null ]
+22 verbose cache add spec grunt-sass@^0.14.0
+23 silly cache add parsed spec { raw: 'grunt-sass@^0.14.0',
+23 silly cache add   scope: null,
+23 silly cache add   name: 'grunt-sass',
+23 silly cache add   rawSpec: '^0.14.0',
+23 silly cache add   spec: '>=0.14.0 <0.15.0',
+23 silly cache add   type: 'range' }
+24 verbose addNamed grunt-sass@>=0.14.0 <0.15.0
+25 silly addNamed semver.valid null
+26 silly addNamed semver.validRange >=0.14.0 <0.15.0
+27 silly addNameRange { name: 'grunt-sass', range: '>=0.14.0 <0.15.0', hasData: false }
+28 silly mapToRegistry name grunt-sass
+29 silly mapToRegistry using default registry
+30 silly mapToRegistry registry https://registry.npmjs.org/
+31 silly mapToRegistry uri https://registry.npmjs.org/grunt-sass
+32 verbose addNameRange registry:https://registry.npmjs.org/grunt-sass not in flight; fetching
+33 verbose already installed skipping grunt-svgmin@^0.4.0 /Users/beherca/workspace/pushgame
+34 verbose already installed skipping grunt-usemin@^2.3.0 /Users/beherca/workspace/pushgame
+35 verbose already installed skipping grunt-wiredep@^1.7.0 /Users/beherca/workspace/pushgame
+36 verbose already installed skipping jshint-stylish@^0.4.0 /Users/beherca/workspace/pushgame
+37 verbose already installed skipping load-grunt-tasks@^0.4.0 /Users/beherca/workspace/pushgame
+38 verbose already installed skipping time-grunt@^0.4.0 /Users/beherca/workspace/pushgame
+39 verbose already installed skipping apache-server-configs@^2.7.1 /Users/beherca/workspace/pushgame
+40 verbose request uri https://registry.npmjs.org/grunt-sass
+41 verbose request no auth needed
+42 info attempt registry request try #1 at 01:16:35
+43 verbose request id a2d3052347e36aa5
+44 verbose etag "4WQH4BDMW91YLQWCWXBSBC1HU"
+45 http request GET https://registry.npmjs.org/grunt-sass
+46 verbose already installed skipping grunt@^0.4.5 /Users/beherca/workspace/pushgame
+47 verbose already installed skipping grunt-concurrent@^0.5.0 /Users/beherca/workspace/pushgame
+48 verbose already installed skipping grunt-autoprefixer@^1.0.0 /Users/beherca/workspace/pushgame
+49 verbose already installed skipping grunt-contrib-clean@^0.6.0 /Users/beherca/workspace/pushgame
+50 verbose already installed skipping grunt-contrib-concat@^0.5.0 /Users/beherca/workspace/pushgame
+51 verbose already installed skipping grunt-contrib-connect@^0.8.0 /Users/beherca/workspace/pushgame
+52 http 304 https://registry.npmjs.org/grunt-sass
+53 silly get cb [ 304,
+53 silly get   { date: 'Sat, 12 Sep 2015 17:16:35 GMT',
+53 silly get     via: '1.1 varnish',
+53 silly get     'cache-control': 'max-age=60',
+53 silly get     etag: '"4WQH4BDMW91YLQWCWXBSBC1HU"',
+53 silly get     age: '0',
+53 silly get     connection: 'keep-alive',
+53 silly get     'x-served-by': 'cache-nrt6125-NRT',
+53 silly get     'x-cache': 'HIT',
+53 silly get     'x-cache-hits': '1',
+53 silly get     'x-timer': 'S1442078195.027040,VS0,VE748',
+53 silly get     vary: 'Accept' } ]
+54 verbose etag https://registry.npmjs.org/grunt-sass from cache
+55 silly addNameRange number 2 { name: 'grunt-sass', range: '>=0.14.0 <0.15.0', hasData: true }
+56 silly addNameRange versions [ 'grunt-sass',
+56 silly addNameRange   [ '0.1.0',
+56 silly addNameRange     '0.2.1',
+56 silly addNameRange     '0.2.2',
+56 silly addNameRange     '0.2.3',
+56 silly addNameRange     '0.2.4',
+56 silly addNameRange     '0.2.5',
+56 silly addNameRange     '0.3.0',
+56 silly addNameRange     '0.4.0',
+56 silly addNameRange     '0.4.1',
+56 silly addNameRange     '0.5.0',
+56 silly addNameRange     '0.6.0',
+56 silly addNameRange     '0.6.1',
+56 silly addNameRange     '0.7.0',
+56 silly addNameRange     '0.8.0',
+56 silly addNameRange     '0.8.1',
+56 silly addNameRange     '0.9.0',
+56 silly addNameRange     '0.10.0',
+56 silly addNameRange     '0.11.0',
+56 silly addNameRange     '0.12.0',
+56 silly addNameRange     '0.12.1',
+56 silly addNameRange     '0.13.0',
+56 silly addNameRange     '0.13.1',
+56 silly addNameRange     '0.14.0',
+56 silly addNameRange     '0.14.1',
+56 silly addNameRange     '0.14.2',
+56 silly addNameRange     '0.15.0',
+56 silly addNameRange     '0.16.0',
+56 silly addNameRange     '0.16.1',
+56 silly addNameRange     '0.17.0',
+56 silly addNameRange     '0.18.0',
+56 silly addNameRange     '0.18.1',
+56 silly addNameRange     '1.0.0' ] ]
+57 verbose addNamed grunt-sass@0.14.2
+58 silly addNamed semver.valid 0.14.2
+59 silly addNamed semver.validRange 0.14.2
+60 silly cache afterAdd grunt-sass@0.14.2
+61 verbose afterAdd /Users/beherca/.npm/grunt-sass/0.14.2/package/package.json not in flight; writing
+62 verbose afterAdd /Users/beherca/.npm/grunt-sass/0.14.2/package/package.json written
+63 silly install resolved [ { name: 'grunt-sass',
+63 silly install resolved     version: '0.14.2',
+63 silly install resolved     description: 'Compile Sass to CSS using node-sass',
+63 silly install resolved     license: 'MIT',
+63 silly install resolved     repository:
+63 silly install resolved      { type: 'git',
+63 silly install resolved        url: 'https://github.com/sindresorhus/grunt-sass' },
+63 silly install resolved     author:
+63 silly install resolved      { name: 'Sindre Sorhus',
+63 silly install resolved        email: 'sindresorhus@gmail.com',
+63 silly install resolved        url: 'http://sindresorhus.com' },
+63 silly install resolved     engines: { node: '>=0.10.0' },
+63 silly install resolved     scripts: { test: 'grunt' },
+63 silly install resolved     files: [ 'tasks' ],
+63 silly install resolved     keywords:
+63 silly install resolved      [ 'gruntplugin',
+63 silly install resolved        'css',
+63 silly install resolved        'sass',
+63 silly install resolved        'scss',
+63 silly install resolved        'style',
+63 silly install resolved        'compile',
+63 silly install resolved        'preprocess',
+63 silly install resolved        'compile',
+63 silly install resolved        'libsass' ],
+63 silly install resolved     dependencies:
+63 silly install resolved      { chalk: '^0.5.1',
+63 silly install resolved        'each-async': '^1.0.0',
+63 silly install resolved        'node-sass': '0.9.3',
+63 silly install resolved        'object-assign': '^1.0.0' },
+63 silly install resolved     devDependencies:
+63 silly install resolved      { grunt: '^0.4.5',
+63 silly install resolved        'grunt-contrib-clean': '^0.6.0',
+63 silly install resolved        'grunt-contrib-nodeunit': '^0.4.1' },
+63 silly install resolved     gitHead: '10fdfce2eadbc8dd14cc07cf0ae4a6bb76249cf2',
+63 silly install resolved     bugs: { url: 'https://github.com/sindresorhus/grunt-sass/issues' },
+63 silly install resolved     homepage: 'https://github.com/sindresorhus/grunt-sass',
+63 silly install resolved     _id: 'grunt-sass@0.14.2',
+63 silly install resolved     _shasum: '45d4d37959afad37d465318f01719be01992b1f8',
+63 silly install resolved     _from: 'grunt-sass@>=0.14.0 <0.15.0',
+63 silly install resolved     _npmVersion: '2.0.0',
+63 silly install resolved     _npmUser: { name: 'sindresorhus', email: 'sindresorhus@gmail.com' },
+63 silly install resolved     maintainers: [ [Object] ],
+63 silly install resolved     dist:
+63 silly install resolved      { shasum: '45d4d37959afad37d465318f01719be01992b1f8',
+63 silly install resolved        tarball: 'http://registry.npmjs.org/grunt-sass/-/grunt-sass-0.14.2.tgz' },
+63 silly install resolved     directories: {},
+63 silly install resolved     _resolved: 'https://registry.npmjs.org/grunt-sass/-/grunt-sass-0.14.2.tgz',
+63 silly install resolved     readme: 'ERROR: No README data found!' } ]
+64 info install grunt-sass@0.14.2 into /Users/beherca/workspace/pushgame
+65 info installOne grunt-sass@0.14.2
+66 verbose installOne of grunt-sass to /Users/beherca/workspace/pushgame not in flight; installing
+67 warn locking Error: EACCES, open '/Users/beherca/.npm/_locks/grunt-sass-e1fcaa483f11bf28.lock'
+67 warn locking  /Users/beherca/.npm/_locks/grunt-sass-e1fcaa483f11bf28.lock failed { [Error: EACCES, open '/Users/beherca/.npm/_locks/grunt-sass-e1fcaa483f11bf28.lock']
+67 warn locking   errno: 3,
+67 warn locking   code: 'EACCES',
+67 warn locking   path: '/Users/beherca/.npm/_locks/grunt-sass-e1fcaa483f11bf28.lock' }
+68 verbose stack Error: Attempt to unlock /Users/beherca/workspace/pushgame/node_modules/grunt-sass, which hasn't been locked
+68 verbose stack     at unlock (/usr/local/lib/node_modules/npm/lib/utils/locker.js:66:11)
+68 verbose stack     at cb (/usr/local/lib/node_modules/npm/lib/install.js:929:5)
+68 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:933:20
+68 verbose stack     at /usr/local/lib/node_modules/npm/lib/utils/locker.js:40:9
+68 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:149:38)
+68 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/lockfile/lockfile.js:177:38
+68 verbose stack     at Object.oncomplete (fs.js:107:15)
+69 verbose cwd /Users/beherca/workspace/pushgame/test
+70 error Darwin 14.3.0
+71 error argv "node" "/usr/local/bin/npm" "install"
+72 error node v0.10.21
+73 error npm  v2.1.16
+74 error Attempt to unlock /Users/beherca/workspace/pushgame/node_modules/grunt-sass, which hasn't been locked
+75 error If you need help, you may report this error at:
+75 error     <http://github.com/npm/npm/issues>
+76 verbose exit [ 1, true ]

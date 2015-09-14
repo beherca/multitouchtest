@@ -1,0 +1,56 @@
+$icon-font-path: "../bower_components/bootstrap-sass-official/assets/fonts/bootstrap/";
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #72BC67;
+$secondary-color: #F3D16D;
+$third-color: #F2D7BC;
+$fourth-color: #F4766A;
+
+body {
+  font: 100% $font-stack;
+  color: $primary-color;
+}
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+.box { @include border-radius(10px); }
+
+
+@mixin full-screen($zindex) {
+  right: 0;
+  left: 0;
+  top: 0; 
+  bottom: 0;
+  display: block;
+  position: absolute;
+  z-index: $zindex;
+}
+
+#door{
+  @include full-screen(10);
+  background-color: $primary-color;
+}
+
+#bg{
+  @include full-screen(9);
+  background-color: $secondary-color;
+}
+
+#score-board{
+  @include full-screen(11);
+  color: $third-color;
+  bottom: auto;
+  text-align: center;
+}
+
+#score{
+  
+}
