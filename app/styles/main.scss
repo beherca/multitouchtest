@@ -51,6 +51,11 @@ body {
   text-align: center;
 }
 
+#touch-panel{
+  @include full-screen(15);
+  background-color: transparent;
+}
+
 #score{
   
 }
