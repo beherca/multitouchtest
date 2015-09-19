@@ -1,10 +1,13 @@
 $(function(){
     var $score = $('#score');
+    var $height = $('#height');
+    var $vol = $('#vol');
     var $door = $('#door');
     var $bg = $('#bg');
     var $touchPanel = $('#touch-panel');
-    // the score that user get 
+    // distance that user gain in single move
     var score = 0;
+    var scoring = 0;
     // primary effective touch, which should be the first touch point, we have multi point active and dont want to miss count them 
     var primaryTouch = null;// {x: 0, y: 0, id: 0};
     // threshold to varify whether there is a switch of touch point
@@ -26,17 +29,15 @@ $(function(){
                 log('this is the first touch in moving touches array');
                 if(primaryTouch && id == primaryTouch.id){
                     log('moving touch\' id is matched to primaryTouch');
-                    score += primaryTouch.y - py;
+                    scoring = primaryTouch.y - py;
                     primaryTouch.y = py;
                 }else{
                     log('moving touch\' id is not matched to primaryTouch, need reset');
                     primaryTouch = {x:touch.pageX, y: touch.pageY, id: touch.identifier};
                 }
             }
-            infos.push(['x['+ i +']=', px, 'y['+ i +'] =', py, 'score = ', score].join(' '));
         };
-        $score.text(infos.join(' '));
-        $door.attr('style', 'touch-action: none; -webkit-transform: translateY(-'+ score/5 +'px); transform: translateY(-' + score/5 + 'px);');
+        
     }).on('touchstart', function($e){
         log('start touch');
         var e = $e.originalEvent;
@@ -54,18 +55,54 @@ $(function(){
         log('end touch');
         var e = $e.originalEvent;
         e.preventDefault();
-        var touches = e.touches;
+        var touches = e.changedTouches;
         var len = touches.length;
         // get the very first one
         if(len > 0){
             var touch = touches[0];
-            
             if(primaryTouch && primaryTouch.id == touch.identifier){
                 log('Matched Touch is ended');
                 primaryTouch = null;
+                scoring = 0;
             }
         } 
     });
+    window.requestAnimFrame = (function(){
+      return  window.requestAnimationFrame       || 
+              window.webkitRequestAnimationFrame || 
+              window.mozRequestAnimationFrame    || 
+              window.oRequestAnimationFrame      || 
+              window.msRequestAnimationFrame     || 
+              function(/* function */ callback, /* DOMElement */ element){
+                window.setTimeout(callback, 1000 / 60);
+              };
+    })();
+    var debounce = 0;
+    var volocity = 0;
+    var deltaVol = -2;
+    var doorOpenHeight = 200;
+    var resistence = 10;
+    var updateDoorPos = function(){
+        requestAnimationFrame(updateDoorPos);
+        if(doorOpenHeight < 0){
+            doorOpenHeight = 0;
+            volocity = - Math.floor(0.1*(volocity));
+        }else{
+            volocity = volocity + deltaVol;
+            doorOpenHeight = doorOpenHeight + volocity + scoring;
+        }
+        var style = 'touch-action: none; -webkit-transform: translateY(-'+ doorOpenHeight +'px); transform: translateY(-' + doorOpenHeight + 'px);';
+        //$score.text('score=' + score);
+        $door.attr('style', style);
+        if(debounce < 10){
+            debounce++;
+        }else{
+            $height.text(Math.floor(doorOpenHeight));
+            $vol.text(Math.floor(volocity));
+            debounce = 0;
+        }
+    };
+    updateDoorPos();
 });
 
 function log(msg){
