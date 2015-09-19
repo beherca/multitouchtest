@@ -88,8 +88,12 @@ $(function(){
             doorOpenHeight = 0;
             volocity = - Math.floor(0.1*(volocity));
         }else{
-            volocity = volocity + deltaVol;
-            doorOpenHeight = doorOpenHeight + volocity + scoring;
+            if(scoring == 0){
+                volocity = volocity + deltaVol;
+                doorOpenHeight = doorOpenHeight + volocity + scoring;
+            }else{
+                doorOpenHeight = doorOpenHeight + scoring;
+            }
         }
         var style = 'touch-action: none; -webkit-transform: translateY(-'+ doorOpenHeight +'px); transform: translateY(-' + doorOpenHeight + 'px);';
         //$score.text('score=' + score);
@@ -97,8 +101,9 @@ $(function(){
         if(debounce < 10){
             debounce++;
         }else{
-            $height.text(Math.floor(doorOpenHeight));
-            $vol.text(Math.floor(volocity));
+            $score.text('Score ' + Math.floor(scoring));
+            $height.text('Height ' + Math.floor(doorOpenHeight));
+            $vol.text('Volocity ' + Math.floor(volocity));
             debounce = 0;
         }
     };
